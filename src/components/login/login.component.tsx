@@ -1,6 +1,7 @@
 import { ChangeEvent, MouseEvent, useState, useContext } from 'react';
 
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { Button, Container } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
@@ -15,6 +16,7 @@ import { Api } from '../../utils/api';
 import { ApiRoutes, Routes } from '../../utils/api/routes';
 
 import _ from 'lodash';
+
 import { UserContext } from '../../contexts/user';
 import { User as UserType } from '../../contexts/user/user.type';
 
@@ -23,6 +25,7 @@ const Login = () => {
     const [ loginError, setLoginError ] = useState<boolean>(defaultLoginError);
     const navigate = useNavigate();
     const { setUser } = useContext(UserContext);
+    const { t } = useTranslation();
     
     const { user, password } = loginData;
 
@@ -59,7 +62,7 @@ const Login = () => {
                 <LoginFormGrid xs={12} sm={6}>
                     <TextField
                         id="user"
-                        label="User"
+                        label={t('login.user')}
                         variant="standard"
                         name="user"
                         value={user}
@@ -68,7 +71,7 @@ const Login = () => {
                     />
                     <TextField
                         id="password"
-                        label="Password"
+                        label={t('login.password')}
                         variant="standard"
                         name="password"
                         type="password"
@@ -76,7 +79,7 @@ const Login = () => {
                         onChange={handleChange}
                         error={loginError}
                     />
-                    <Button variant="contained" onClick={handleLogin}>Login</Button>
+                    <Button variant="contained" onClick={handleLogin}>{t('login.login')}</Button>
                 </LoginFormGrid>
             </Grid>
         </Container>
