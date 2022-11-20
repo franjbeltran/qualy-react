@@ -6,6 +6,7 @@
     },
     "header": {
         "title": "Qualy",
+        "logout": "Logout",
         "avatar": {
             "tooltip": "Settings"
         }

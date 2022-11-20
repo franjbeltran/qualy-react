@@ -5,7 +5,6 @@ import { Routes } from "../../utils/api/routes";
 
 export const Authentication = ({ children }: { children: any }) => {
     const { user } = useContext(UserContext);
-    debugger
     if (!user.logged) {
         return <Navigate to={Routes.LOGIN} />;
     }

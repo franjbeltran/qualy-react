@@ -1,4 +1,4 @@
-import { AppBar, Box } from '@mui/material';
+import { AppBar, Box, Button } from '@mui/material';
 import styled from 'styled-components';
 
 export const AppBarContainer = styled(AppBar)({
@@ -6,6 +6,7 @@ export const AppBarContainer = styled(AppBar)({
     flexDirection: 'row',
     marginBottom: '2rem',
     padding: '1rem 2rem',
+    minHeight: '100px'
 });
 
 export const TitleContainer = styled(Box)({
@@ -17,5 +18,11 @@ export const TitleContainer = styled(Box)({
 });
 
 export const AvatarContainer = styled(Box)({
-    justifyContent: 'right'
+    display: 'flex',
+    justifyContent: 'right',
+    alignItems: 'center'
+});
+
+export const LogoutButton = styled(Button)({
+    color: 'white'
 });
