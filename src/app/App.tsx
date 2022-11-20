@@ -10,6 +10,8 @@ import { MainContainer } from './App.styles';
 
 import { UserProvider } from '../contexts/user';
 
+import '../locales';
+
 const router = createBrowserRouter([
   {
     path: '/',

@@ -54,6 +54,9 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "@types/store": "^2.0.2",
-    "@types/styled-components": "^5.1.26"
+    "@types/styled-components": "^5.1.26",
+    "i18next": "^22.0.6",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "react-i18next": "^12.0.0"
   }
 }
