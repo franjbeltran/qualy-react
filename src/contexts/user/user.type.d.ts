@@ -5,5 +5,6 @@ export type User = {
     name: string,
     role: rumber,
     accessToken: string,
-    uid: string
+    uid: string,
+    logged: boolean
 };

@@ -1,5 +1,6 @@
 export const Routes = {
-    HOME: '/'
+    HOME: '/',
+    LOGIN: '/login'
 };
 
 export const ApiRoutes = {
