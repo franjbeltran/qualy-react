@@ -3,5 +3,10 @@
         "user": "Usuario",
         "password": "Contraseña",
         "login": "Login"
+    },
+    "header": {
+        "avatar": {
+            "tooltip": "Preferencias"
+        }
     }
 }
