@@ -11,9 +11,10 @@ export const UserContext = createContext({
 export const UserProvider = ({ children }: { children?: ReactNode} ) => {
     const [ storedUser, storeUser ] = usePersistState('user');
     const [ user, setUser ] = useState<UserType>(storedUser);
-    console.log('Initializing User Context');
+
     return (
-        <UserContext.Provider value={{ user, setUser: (user: UserType) => {
+        <UserContext.Provider value={{ user, setUser: (newUser: UserType) => {
+                const user: UserType = {...newUser, logged: !!newUser.uid};
                 setUser(user);
                 storeUser(user);
             } }}>

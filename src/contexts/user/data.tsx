@@ -7,5 +7,6 @@ export const defaultUser: User = {
     name: '',
     role: 0,
     accessToken: '',
-    uid: ''
+    uid: '',
+    logged: false
 };

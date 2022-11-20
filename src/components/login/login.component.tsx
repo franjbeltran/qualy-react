@@ -39,14 +39,16 @@ const Login = () => {
     
         const { user, password } = loginData;
 
-        Api.get({ endpoint: ApiRoutes.USERS, params: { username: user, password} }).then((result) => {
+        Api.get({ endpoint: ApiRoutes.USERS, params: { username: user, password} }).then(async (result) => {
             const isEmpty = _.isEmpty(result.data);
             setLoginError(isEmpty);
 
             if (isEmpty) return;
 
             setUser(_.first(result.data) as UserType);
-            navigate(Routes.HOME);
+            setTimeout(() => {
+                navigate(Routes.HOME);
+            }, 1);
         }).catch(() => {
             setLoginError(true);
         });

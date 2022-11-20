@@ -11,11 +11,12 @@ import { MainContainer } from './App.styles';
 import { UserProvider } from '../contexts/user';
 
 import '../locales';
+import { Authentication } from '../components/authentication/authentication.component';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />
+    element: <Authentication><Home /></Authentication>,
   },
   {
     path: '/login',

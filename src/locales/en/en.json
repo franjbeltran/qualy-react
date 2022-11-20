@@ -3,5 +3,12 @@
         "user": "User",
         "password": "Password",
         "login": "Login"
+    },
+    "header": {
+        "title": "Qualy",
+        "logout": "Logout",
+        "avatar": {
+            "tooltip": "Settings"
+        }
     }
 }
