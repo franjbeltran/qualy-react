@@ -23,7 +23,7 @@ const Login = () => {
     const [ loginError, setLoginError ] = useState<boolean>(defaultLoginError);
     const navigate = useNavigate();
     const { setUser } = useContext(UserContext);
-
+    
     const { user, password } = loginData;
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
