@@ -1,4 +1,4 @@
-import { ChangeEvent, MouseEvent, useState } from 'react';
+import { ChangeEvent, MouseEvent, useState, useContext } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -15,11 +15,14 @@ import { Api } from '../../utils/api';
 import { ApiRoutes, Routes } from '../../utils/api/routes';
 
 import _ from 'lodash';
+import { UserContext } from '../../contexts/user';
+import { User as UserType } from '../../contexts/user/user.type';
 
 const Login = () => {
     const [ loginData, setLoginData ] = useState<LoginType>(defaultLoginData);
     const [ loginError, setLoginError ] = useState<boolean>(defaultLoginError);
     const navigate = useNavigate();
+    const { setUser } = useContext(UserContext);
 
     const { user, password } = loginData;
 
@@ -36,7 +39,11 @@ const Login = () => {
         Api.get({ endpoint: ApiRoutes.USERS, params: { username: user, password} }).then((result) => {
             const isEmpty = _.isEmpty(result.data);
             setLoginError(isEmpty);
-            !isEmpty && navigate(Routes.HOME);
+
+            if (isEmpty) return;
+
+            setUser(_.first(result.data) as UserType);
+            navigate(Routes.HOME);
         }).catch(() => {
             setLoginError(true);
         });

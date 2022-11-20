@@ -8,6 +8,8 @@ import Header from '../components/header/header.component';
 
 import { MainContainer } from './App.styles';
 
+import { UserProvider } from '../contexts/user';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -22,8 +24,10 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <MainContainer>
-      <Header />
-      <RouterProvider router={router} />
+      <UserProvider>
+        <Header />
+        <RouterProvider router={router} />
+      </UserProvider>
     </MainContainer>
   );
 }
