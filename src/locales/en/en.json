@@ -10,5 +10,11 @@
         "avatar": {
             "tooltip": "Settings"
         }
+    },
+    "games": {
+        "message": {
+            "error": "We couldn't retrieve the information. Please try again.",
+            "refresh": "Refresh"
+        }
     }
 }
