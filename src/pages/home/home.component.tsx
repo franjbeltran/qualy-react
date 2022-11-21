@@ -1,8 +1,7 @@
+import { Games } from "../games/games.component";
 
 const HomePage = () => (
-    <div>
-        <h1>Home page</h1>
-    </div>
+    <Games />
 );
 
 export default HomePage;

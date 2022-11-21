@@ -1,8 +1,10 @@
 export const Routes = {
     HOME: '/',
-    LOGIN: '/login'
+    LOGIN: '/login',
+    GAMES: '/games'
 };
 
 export const ApiRoutes = {
-    USERS: '/users'
+    USERS: '/users',
+    GAMES: '/games'
 };

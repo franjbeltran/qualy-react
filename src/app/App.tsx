@@ -12,6 +12,7 @@ import { UserProvider } from '../contexts/user';
 
 import '../locales';
 import { Authentication } from '../components/authentication/authentication.component';
+import { Games } from '../pages/games/games.component';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />
+  },
+  {
+    path: '/games',
+    element: <Authentication><Games/></Authentication>
   }
 ]);
 

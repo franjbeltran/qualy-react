@@ -19,7 +19,7 @@ const Header = () => {
 
    return (
       <StyledEngineProvider injectFirst>
-         <AppBarContainer position='static'>
+         <AppBarContainer position='sticky'>
                <TitleContainer>
                   <Typography variant="h4">
                      {t('header.title')}
@@ -35,7 +35,9 @@ const Header = () => {
                         </IconButton>
                      </Tooltip>
                      <LogoutButton onClick={handleLogout}>
-                        {t('header.logout')}
+                        <Typography color="white">
+                           {t('header.logout')}
+                        </Typography>
                      </LogoutButton>
                   </AvatarContainer>
                )}
