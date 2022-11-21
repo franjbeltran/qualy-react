@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders the structure 1`] = `
+<div>
+  <div
+    class="sc-gKPRtg ioznsx"
+  >
+    <header
+      data-testid="header"
+      is="header"
+    />
+    <routerprovider
+      is="router-provider"
+    />
+  </div>
+</div>
+`;
